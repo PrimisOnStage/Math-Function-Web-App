@@ -31,7 +31,6 @@ def modulo():
     result = number1 % number2
     return jsonify(result=result)
 
-<<<<<<< HEAD
 @app.route('/multiply', methods=['POST'])
 def multiply():
     num1 = float(request.form['num1'])
@@ -39,16 +38,19 @@ def multiply():
     result = num1 * num2
     return jsonify(result=result)    
 
-=======
 def sqrt():
     num = int(input("Enter a Number: "))
     if num<0:
         return "not possible"
     return math.sqrt(num)
 
->>>>>>> 9a744ae9c9d3956fc4fea9a84438d67d128be768
 # You can add more routes for each math function
 # for example, multiplication, square roots, etc.
+
+def area_of_circle():
+    r = int(input("Enter the Radius: "))
+    area = (3.14 * r *r)
+    return area
 
 if __name__ == '__main__':
     app.run(debug=True)
